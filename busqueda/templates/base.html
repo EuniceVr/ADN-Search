@@ -1,0 +1,64 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> ADN Search </title>
+  </head>
+  <style>
+    #myHeader {
+      background-color: #e0d5d2;
+      color: black;
+      background-repeat: no-repeat;
+      background-position: right top;
+      margin-right: 200px;
+    }
+    a:link, a:visited {
+      background-color: white;
+      color: black;
+      padding: 14px 25px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+    }
+    a:hover, a:active {
+      background-color: #e0d5d2;
+    }
+  </style>
+
+  <body>
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <style>
+        h1{
+          text-shadow: 1px 1px white;
+          text-align: center;
+        }
+      </style>
+      </head>
+      <body>
+        <h1 id="myHeader">ADN SEARCH</h1>
+        
+        <ul style="list-style-type: none">
+        {% block content %}
+        {% endblock %}
+        <li>
+          <a href="{% url 'search' %}" >Subir Archivo</a>
+        </li>
+        <li>
+          <a href="{% url 'porcentaje' %}" >Porcentaje</a>
+        </li>
+        <li>
+          <a href="{% url 'count_base' %}">Contar base</a>
+        </li>
+        <li>
+          <a href="{% url 'count_codon' %}">Contar codones</a>
+        </li>
+        <li>
+          <a href="{% url 'total_base' %}">Total de bases</a>
+        </li>
+        </ul>
+      </body>
+      </html>
+  </body>
+</html>
